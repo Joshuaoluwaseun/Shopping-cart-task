@@ -1,9 +1,24 @@
 // 1. create a constructor function `Product` with two private properties, `name` and `price` respectively.
+function Product(names, prices) {
+    // Private properties
+    let name = names;
+    let price = prices;
 
-function Product(name, price) {
-    this.name = name;
-    this.price = price;
+    // Getter for name
+    this.getName = function() {
+        return name;
+    };
+
+    // Getter for price
+    this.getPrice = function() {
+        return price;
+    };
 }
+const product1 = new Product("Apple", 1.99);
+console.log(product1.getName());
+console.log(product1.getPrice());
+
+
 
 // 2. create another constructor function `ShoppingCart` with a private property of `items` holding an empty array.
 function ShoppingCart() {
